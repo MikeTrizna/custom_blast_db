@@ -1,0 +1,76 @@
++ Wed Apr 8 11:47:09 EDT 2020 job makeblastdb started in sThM.q with jobID=7632686 on compute-64-18
+
+
+Building a new DB, current time: 04/08/2020 11:47:09
+New DB name:   /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+New DB title:  coi_2020_04_01
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+Keep MBits: T
+Maximum file size: 1000000000B
+
+No volumes were created because no sequences were found.
+
+Error: mdb_env_open: Cannot allocate memory
+= Wed Apr 8 11:47:15 EDT 2020 job makeblastdb done
++ Wed Apr 8 11:50:39 EDT 2020 job makeblastdb started in sThM.q with jobID=7632717 on compute-64-18
+
+
+Building a new DB, current time: 04/08/2020 11:50:39
+New DB name:   /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+New DB title:  coi_2020_04_01
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+Keep MBits: T
+Maximum file size: 1000000000B
+
+No volumes were created because no sequences were found.
+
+Error: mdb_env_open: Cannot allocate memory
+= Wed Apr 8 11:50:44 EDT 2020 job makeblastdb done
++ Wed Apr 8 11:57:24 EDT 2020 job makeblastdb started in sThM.q with jobID=7632791 on compute-64-18
+USAGE
+  makeblastdb [-h] [-help] [-in input_file] [-input_type type]
+    -dbtype molecule_type [-title database_title] [-parse_seqids]
+    [-hash_index] [-mask_data mask_data_files] [-mask_id mask_algo_ids]
+    [-mask_desc mask_algo_descriptions] [-gi_mask]
+    [-gi_mask_name gi_based_mask_names] [-out database_name]
+    [-blastdb_version version] [-max_file_sz number_of_bytes]
+    [-logfile File_Name] [-taxid TaxID] [-taxid_map TaxIDMapFile] [-version]
+
+DESCRIPTION
+   Application to create BLAST databases, version 2.9.0+
+
+Use '-help' to print detailed descriptions of command line arguments
+========================================================================
+
+Error:  (CArgException::eConstraint) Argument "parse_seqids". Must be specified, as it is required by argument:  `taxid_map'
+= Wed Apr 8 11:57:24 EDT 2020 job makeblastdb done
++ Wed Apr 8 11:58:54 EDT 2020 job makeblastdb started in sThM.q with jobID=7632841 on compute-64-18
+
+
+Building a new DB, current time: 04/08/2020 11:58:54
+New DB name:   /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+New DB title:  coi_2020_04_01
+Sequence type: Nucleotide
+Deleted existing Nucleotide BLAST database named /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 3531630 sequences in 102.765 seconds.
+= Wed Apr 8 12:00:43 EDT 2020 job makeblastdb done
++ Wed Apr 8 12:05:39 EDT 2020 job makeblastdb started in sThM.q with jobID=7632995 on compute-64-18
+
+
+Building a new DB, current time: 04/08/2020 12:05:39
+New DB name:   /scratch/genomics/triznam/coi_blast/blast_db/coi_2020_04_01
+New DB title:  coi_2020_04_01
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+
+No volumes were created because no sequences were found.
+
+Error: mdb_env_open: Cannot allocate memory
+= Wed Apr 8 12:05:45 EDT 2020 job makeblastdb done
++ Wed Apr 8 16:24:29 EDT 2020 job makeblastdb started in sThM.q with jobID=7636296 on compute-64-18
+= Wed Apr 8 16:25:51 EDT 2020 job makeblastdb done

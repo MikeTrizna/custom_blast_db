@@ -1,0 +1,23 @@
+# /bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -q mThM.q
+#$ -l mres=25G,h_data=25G,h_vmem=25G,himem
+#$ -cwd
+#$ -j y
+#$ -N ncbi_custom_coi
+#$ -o logs/ncbi_custom_coi.log
+#
+# ----------------Modules------------------------- #
+#
+module load ~/modulefiles/miniconda
+source activate blast_tools
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+#
+python ncbi_download_custom_coi.py
+#
+echo = `date` job $JOB_NAME done
+

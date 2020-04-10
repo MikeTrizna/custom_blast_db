@@ -1,0 +1,23 @@
+# /bin/sh 
+#----------------Parameters---------------------- # 
+#$ -S /bin/sh 
+#$ -q sThM.q 
+#$ -l mres=300G,h_data=300G,h_vmem=300G,himem 
+#$ -cwd 
+#$ -j y 
+#$ -N makeblastdb 
+#$ -o logs/makeblastdb.log 
+#$ -m bea
+#
+# ----------------Modules------------------------- #
+#
+module load ~/modulefiles/miniconda 
+source activate blast_tools
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+#
+makeblastdb -in results/coi_custom_2020_04_01.fasta -parse_seqids -blastdb_version 5 -taxid_map results/accession_taxid_for_db.tsv -out blast_db/coi_2020_04_01 -title "coi_2020_04_01" -dbtype nucl
+#
+echo = `date` job $JOB_NAME done

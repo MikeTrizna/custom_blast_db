@@ -1,0 +1,27 @@
+# /bin/sh
+# ----------------Parameters---------------------- #
+#$ -S /bin/sh
+#$ -q sThC.q
+#$ -l mres=4G,h_data=4G,h_vmem=4G
+#$ -cwd
+#$ -j y
+#$ -N blast_split_job_array
+#$ -o logs/loop_$TASK_ID.log
+#
+# ----------------Modules------------------------- #
+module load ~/modulefiles/miniconda
+source activate blast_tools
+#
+# ----------------Your Commands------------------- #
+#
+echo + `date` job $JOB_NAME started in $QUEUE with jobID=$JOB_ID on $HOSTNAME
+#
+PADDED_ID=`printf "%03d" ${SGE_TASK_ID}`
+FASTA=data/fasta_split/macse_out.part_${PADDED_ID}.fasta
+#
+blastn -db blast_db/coi_2020_04_01 \
+       -query $FASTA \
+       -max_target_seqs 5 \
+       -outfmt "6 qseqid sacc staxids pident qcovs" \
+       -out blast_results/results_${SGE_TASK_ID}.tsv
+echo = `date` job $JOB_NAME done
